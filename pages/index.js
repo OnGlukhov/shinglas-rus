@@ -37,7 +37,7 @@ export default function Home() {
 			<Advantages />
 			<Examples />
 			<Contacts />
-			<div style={{ position: 'relative', overflow: 'hidden' }}><a href="https://yandex.ru/maps/213/moscow/house/proyektiruyemy_proyezd_134_vl4/Z04YcgJmTUUBQFtvfXpzdXhrYA==/?from=mapframe&ll=37.456405%2C55.624484&utm_medium=mapframe&utm_source=maps&z=17" style={{ color: '#eee', fontSize: '12px', position: 'absolute', top: '14px' }}>Проектируемый проезд № 134, вл4 на карте Москвы — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUyjEgUpD" width="100%" height="500" frameborder="1" allowfullscreen="true" style={{ position: 'relative', border: 'none' }}></iframe></div>
+			<div style={{ position: 'relative', overflow: 'hidden' }}><a href="https://yandex.ru/maps/213/moscow/house/proyektiruyemy_proyezd_134_vl4/Z04YcgJmTUUBQFtvfXpzdXhrYA==/?from=mapframe&ll=37.456405%2C55.624484&utm_medium=mapframe&utm_source=maps&z=17" style={{ color: '#eee', fontSize: '12px', position: 'absolute', top: '14px' }}>Проектируемый проезд № 134, вл4 на карте Москвы — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUyjEgUpD" width="100%" height="500" frameBorder="1" allowFullScreen={true} style={{ position: 'relative', border: 'none' }}></iframe></div>
 			<Footer />
 		</div>
 	)

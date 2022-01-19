@@ -47,13 +47,13 @@ export default function Сatalog({ width }) {
 			</div>
 			<div className={styles.catalog_products}>
 				{productsFilter.map((product, i) => (
-					<div key={i} className={styles.catalog_product}>
+					<div key={product.id} className={styles.catalog_product}>
 						<ul className={styles.catalog_product__list_color}>
 							{product.img.small.map((img, index) => (
 								<li key={index} className={styles.catalog_product__color}>
 									<div style={{ position: 'relative' }}>
 										<img className={styles.catalog_product__color__img} onClick={() => setIndexProduct(index)} src={img.image} />
-										<img className={indexProduct === index ? styles.catalog_product__current : styles.none} src={'/images/current.png'} />
+										<img className={indexProduct === index ? `${styles.catalog_product__current}` : `${styles.none}`} src={'/images/current.png'} />
 									</div>
 									<p className={styles.catalog_product__text}>{img.color}</p>
 								</li>

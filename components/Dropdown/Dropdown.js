@@ -17,26 +17,21 @@ export default function Dropdown({ filterProducts, indexItem, button }) {
 				</button>
 				<div className={isActive ? styles.dropdown_menu : styles.off}>
 					{category.map((item, index) => (
-						<>
+						<div key={index}>
 							<h5 style={{ margin: '15px 0' }}>{item.name}</h5>
 							<ul className={styles.dropdown_menu_list}>
 								{item.cat.map((v, index) => (
 									<li key={index}
 										onClick={() => {
-											filterProducts(v.collection);
-											indexItem(v.collection);
+											filterProducts(v.collection)
+											indexItem(v.collection)
 											setIsActive(!isActive)
 										}}
 										className={v.collection === button ? `${styles.dropdown_item} ${styles.active}` : `${styles.dropdown_item}`}
 									><a>{v.collection}</a><span>{v.price}</span></li>
-
-
 								))}
 							</ul>
-
-
-						</>
-
+						</div>
 					))}
 				</div>
 			</div>
