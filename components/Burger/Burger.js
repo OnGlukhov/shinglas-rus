@@ -17,8 +17,8 @@ export default function Burger() {
         <ul className={styles.burger_list}>
           <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#main'>ГЛАВНАЯ</a></li>
           <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#catalog'>КАТАЛОГ И ЦЕНЫ</a></li>
-          <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#advantages'>ПРИМЕРЫ</a></li>
-          <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#examples'>ПРИМЕНЕНИЕ</a></li>
+          <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#advantages'>ПРЕИМУЩЕСТВА</a></li>
+          <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#examples'>ПРИМЕРЫ</a></li>
           <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#contacts'>КОНТАКТЫ</a></li>
         </ul>
         <ul className={`${styles.burger_list} ${styles.margin}`}>
