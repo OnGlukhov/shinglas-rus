@@ -28,7 +28,7 @@ export default function Dropdown({ filterProducts, indexItem, button }) {
 											setIsActive(!isActive)
 										}}
 										className={v.collection === button ? `${styles.dropdown_item} ${styles.active}` : `${styles.dropdown_item}`}
-										key={index}><a>{v.collection}</a><span>{v.price}</span></li>
+									><a>{v.collection}</a><span>{v.price}</span></li>
 
 
 								))}

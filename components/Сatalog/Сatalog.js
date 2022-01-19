@@ -8,10 +8,9 @@ import { Link } from "react-scroll"
 export default function Сatalog({ width }) {
 	const [productsFilter, setProductsFilter] = React.useState(products.filter(i => i.collection === 'Фокстрот'))
 	const [button, setButton] = React.useState('Фокстрот')
-	const [buttonList, setButtonList] = React.useState(0)
 	const [indexProduct, setIndexProduct] = React.useState(0)
+
 	const indexItem = index => {
-		console.log('index', index)
 		setButton(index)
 	}
 
@@ -20,7 +19,7 @@ export default function Сatalog({ width }) {
 		setIndexProduct(0)
 
 	}
-	console.log('indexProduct', indexProduct)
+
 	return (
 		<section className={styles.catalog} id='catalog'>
 			<h1 className={styles.catalog_title}>
@@ -33,27 +32,15 @@ export default function Сatalog({ width }) {
 				{width > 900 ?
 					<Size
 						filterProducts={filterProducts}
-						products={products}
 						indexItem={indexItem}
 						button={button}
-						buttonList={buttonList}
-						setButtonList={setButtonList} /> :
+					/> :
 					<Dropdown
 						filterProducts={filterProducts}
-						products={products}
 						indexItem={indexItem}
 						button={button}
-						buttonList={buttonList}
-						setButtonList={setButtonList} />
+					/>
 				}
-
-				{/* <Dropdown
-					filterProducts={filterProducts}
-					products={products}
-					indexItem={indexItem}
-					button={button}
-					buttonList={buttonList}
-					setButtonList={setButtonList} /> */}
 				<div>
 
 				</div>

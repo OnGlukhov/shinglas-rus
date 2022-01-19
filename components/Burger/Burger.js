@@ -4,6 +4,7 @@ import { contacts } from '../../data/contacts'
 
 
 export default function Burger() {
+
   const [isActive, setIsActive] = React.useState(false)
 
   return (

@@ -1,7 +1,7 @@
 import styles from "./Size.module.sass";
 import { category } from '../../data/category'
 
-export default function Size({ filterProducts, products, indexItem, state, button }) {
+export default function Size({ filterProducts, indexItem, button }) {
 
   return (
     <div className={styles.catalog}>
