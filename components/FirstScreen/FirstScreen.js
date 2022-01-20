@@ -1,36 +1,76 @@
-import styles from "./FirstScreen.module.sass";
-import { Link } from "react-scroll";
+import styles from "./FirstScreen.module.sass"
+import { Link } from "react-scroll"
+import { motion } from 'framer-motion'
+import { animations } from '../../styles/animations'
 
 export default function FirstScreen() {
   return (
     <section className={styles.firstScreen} id="main">
       <div className={styles.firstScreen_wrapper_block}>
         <div className={styles.firstScreen_block}>
-          <div
-            className={`${styles.firstScreen_line} ${styles.fadeInLeft}`}
-          ></div>
+          <motion.div
 
-          <h1 className={styles.firstScreen_title}>
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={animations.line.variants}
+            transition={animations.line.transition}
+            className={`${styles.firstScreen_line} ${styles.fadeInLeft}`}
+          ></motion.div>
+
+          <motion.h1
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={animations.slideUp.variants}
+            transition={animations.slideUp.transition}
+            className={styles.firstScreen_title}>
             Гибкая черепица <span className={styles.firstScreen_span}>Shinglas</span>
-          </h1>
-          <p className={styles.firstScreen_subtitle}>
+          </motion.h1>
+          <motion.p
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={animations.slideUp.variants}
+            transition={animations.slideUp.transition}
+            className={styles.firstScreen_subtitle}>
             Однослойная и многослойная черепица
-          </p>
-          <h1 className={styles.firstScreen_title}>
+          </motion.p>
+          <motion.h1
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={animations.slideUp.variants}
+            transition={animations.slideUp.transition} className={styles.firstScreen_title}>
             от 347 руб/м2
-          </h1>
-          <p className={styles.firstScreen_subtitle}>
+          </motion.h1>
+          <motion.p
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={animations.slideUp.variants}
+            transition={animations.slideUp.transition} className={styles.firstScreen_subtitle}>
             <img src={'/images/current-black.png'} />
             Прямые поставки от производителя
-          </p>
-          <p className={styles.firstScreen_subtitle}>
+          </motion.p>
+          <motion.p
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={animations.slideUp.variants}
+            transition={animations.slideUp.transition} className={styles.firstScreen_subtitle}>
             <img src={'/images/current-black.png'} />
             Низкие цены
-          </p>
-          <p className={styles.firstScreen_subtitle}>
+          </motion.p>
+          <motion.p
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            variants={animations.slideUp.variants}
+            transition={animations.slideUp.transition} className={styles.firstScreen_subtitle}>
             <img src={'/images/current-black.png'} />
             Доставка по всей России
-          </p>
+          </motion.p>
           <Link
             to="contacts"
             spy={true}

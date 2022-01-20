@@ -19,7 +19,9 @@ function MyApp({ Component, pageProps }) {
 				// Если загружается то показываем прелоадер
 				loading && <Preloader />
 			}
-			<Component {...pageProps} />
+			{!loading && (
+				<Component {...pageProps} />
+			)}
 		</>
 
 	)

@@ -26,11 +26,11 @@ export default function Burger() {
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <a onClick={() => setIsActive(!isActive)} className={styles.burger_list_tel} href={`tel:${contacts.phone}`}>{contacts.phone}</a>
 
-            {/* <a
+            <a
               href={`https://api.whatsapp.com/send?phone=${contacts.whatsapp}`}
             >
               <img className={styles.whatsapp} src={'/images/social/whatsapp-svgrepo-com.svg'}></img>
-            </a> */}
+            </a>
 
           </div>
           <p className={styles.burger_list_address}>{contacts.address}</p>

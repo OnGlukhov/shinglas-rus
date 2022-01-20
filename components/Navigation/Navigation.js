@@ -75,11 +75,11 @@ export default function Navigation() {
 			>
 				{contacts.phone}
 			</a>
-			{/* <a
+			<a
 				href={`https://api.whatsapp.com/send?phone=${contacts.whatsapp}`}
 			>
 				<img className={styles.whatsapp} src={'/images/social/whatsapp-svgrepo-com.svg'}></img>
-			</a> */}
+			</a>
 		</nav>
 	)
 }
