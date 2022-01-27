@@ -58,7 +58,8 @@ export default function FeedBack(props) {
     });
   }
 
-  async function sendForm() {
+  async function sendForm(env) {
+    env.preventDefault()
     let check = await checkForm();
     if (!check) {
       return;
@@ -68,13 +69,24 @@ export default function FeedBack(props) {
       props.onFulfilled('loading');
     } catch (err) {}
 
-    fetch('/api/sendform', {
+    fetch('https://xn--j1ano.com/sendmail', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ ...formState, path: router.asPath }),
+      body: JSON.stringify({ 
+        ...formState,
+        path: router.asPath,
+        to: 'shinglas@tdcskcom', 
+        fromSite: 'shinglas-rus' ,
+        EMAIL_PORT: 465,
+        EMAIL_HOST: 'smtp.gmail.com',
+        EMAIL_SENDER: 'belplit.order@gmail.com',
+        EMAIL_SENDER_PASS: 'HGVFdsfjs654',
+        EMAIL_RECIPIENT: 'shinglas-rus@yandex.ru'
+
+      }),
     })
       .then((res) => {
         if (res.ok) {
