@@ -95,11 +95,11 @@ export default function Сatalog({ width, products }) {
   return (
     <section className={styles.catalog} id="catalog">
       <h1 className={styles.catalog_title}>
-        Размеры и цены <span>ЦСП</span> плит
+        Каталог и цены черепицы <span>Shinglas</span>
       </h1>
-      <p className={styles.catalog_subtitle}>
+      {/* <p className={styles.catalog_subtitle}>
         У нас представлены фанера разных размеров и производителей
-      </p>
+      </p> */}
       <div className={styles.catalog_size}>
         {width > 900 ? (
           <Size
