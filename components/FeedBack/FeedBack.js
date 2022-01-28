@@ -80,12 +80,6 @@ export default function FeedBack(props) {
         path: router.asPath,
         to: 'shinglas@tdcskcom', 
         fromSite: 'shinglas-rus' ,
-        EMAIL_PORT: 465,
-        EMAIL_HOST: 'smtp.gmail.com',
-        EMAIL_SENDER: 'belplit.order@gmail.com',
-        EMAIL_SENDER_PASS: 'HGVFdsfjs654',
-        EMAIL_RECIPIENT: 'shinglas-rus@yandex.ru'
-
       }),
     })
       .then((res) => {
