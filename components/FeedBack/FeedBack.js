@@ -78,7 +78,7 @@ export default function FeedBack(props) {
       body: JSON.stringify({ 
         ...formState,
         path: router.asPath,
-        to: 'shinglas@tdcskcom', 
+        to: 'shinglas-rus@yandex.ru', 
         fromSite: 'shinglas-rus' ,
       }),
     })
